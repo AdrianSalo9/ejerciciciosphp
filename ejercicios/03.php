@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <?php 
     define ('SIZE',10);
-    $number=8;
-    for ($i=0; $i <= SIZE; $i++) { 
-        echo" El número ".$number." multiplicado por ".$i." da ".$number*$i;  
-        echo "<br>";    
-    }  
+    for ($i=1; $i <= SIZE; $i++) { 
+        if ($i%3==0) {
+            echo $i . " es un múltiplo de tres <br>";
+        }    
+    } 
     ?>
 </body>
 </html>
