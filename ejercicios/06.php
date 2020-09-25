@@ -8,7 +8,13 @@
 <body>
     <?php
     $basket = ["Adrián","Diego","Jorge","Javier","Luis"]; 
-    $basket = array("Adrián","Diego","Jorge","Javier","Luis");
+    $basket = array(
+        'Pivot'=>"Adrian",
+        'Ala'=>"Diego",
+        'Ala-Pivot'=>"Jorge",
+        'Base'=>"Javier",
+        'Escolta'=>"Luis"
+    );
     foreach ($basket as $element) {
         echo "<ul><li>".$element."</li></ul>";
     }
