@@ -7,17 +7,18 @@
 </head>
 <body>
     <?php
-    $divisor=20;  
-    $primo=false; 
+    $divisor=13;  
+    $primo=0; 
     echo "Los divisores de ".$divisor." son: ";     
         for ($i=1; $i <= $divisor; $i++) { 
             if ($divisor%$i==0) {
-                echo $i." ";         
+                echo $i." ";
+                $primo ++;         
             }          
+        }   
+        if ($primo==2) {
+            echo "Es un número primo";
         }
-
-    
-    
     ?>
 </body>
 </html>
