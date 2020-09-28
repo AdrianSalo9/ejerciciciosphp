@@ -16,7 +16,7 @@
         'Escolta'=>"Luis"
     );
     foreach ($basket as $position => $element) {
-        echo "<ul><li>".$position." : ".$element."</li></ul>";
+        echo $position ." : ". $element."<br>";
     }
     ?>
 </body>
