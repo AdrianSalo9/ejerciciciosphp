@@ -1,5 +1,3 @@
-
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,7 @@
 </head>
 <body>
 <h1>Dime los siguientes datos del libro</h1>
-    <form method="post" action="/11action.php">
+    <form method="post" action="11action.php">
         <label>Título<input type="text" value="" name="titulo"><br>
         <label>Autor</label><input type="text" value="" name="autor"><br>
         <label>Editorial</label><input type="text" value="" name="editorial"><br>
