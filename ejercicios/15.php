@@ -8,7 +8,7 @@
 <body>
 <?php if (!empty($_GET)) {?>      
         <h1>Hola <?php foreach($_GET['nombres'] as $nombre){
-            echo "<ul><li>".$nombre."</li></ul>";
+            echo $nombre." ";
         } ?></h1>
         <?php }else {?>
         <form action="" method="get" >  
