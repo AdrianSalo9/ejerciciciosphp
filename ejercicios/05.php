@@ -9,7 +9,7 @@
     <?php
     $divisor=13;  
     $primo=0; 
-    echo "Los divisores de ".$divisor." son: ";     
+    echo "Los divisores de $divisor son: ";     
         for ($i=1; $i <= $divisor; $i++) { 
             if ($divisor%$i==0) {
                 echo $i." ";
