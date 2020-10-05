@@ -41,6 +41,7 @@ class app{
     }
     public function primos(){
         $primos=[];
+        $noPrimos=[];
         function esPrimo($x){
        for ($i=1; $i <= ($x/2) ; $i++) { 
            if ($x%$i==0) {
@@ -51,8 +52,10 @@ class app{
        }          
        }
         for ($i=0; $i <=10 ; $i++) { 
-            if (esPrimo($i)==true) {
+            if (esPrimo($i)==false) {
               $primos[]=$i;  
+            }else {
+                $noPrimos[]=$i;
             }
         }
         include('views/primos.php');

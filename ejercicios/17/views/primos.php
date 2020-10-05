@@ -9,7 +9,10 @@
     <h1>Lista con los números primos</h1>
     <?php
     foreach ($primos as $num) {
-        echo $num." ";
+        echo "Los primos son $num"." "."<br>";
+    }
+    foreach ($noPrimos as $nume) {
+        echo "Los no primos son $nume"." "."<br>";
     }
     ?>
 </body>
