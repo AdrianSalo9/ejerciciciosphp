@@ -19,8 +19,7 @@ class app{
         include('views/fibonacci.php');
     }
     public function listaPares() 
-    {
-        
+    {     
         $pares=[];
         for ($i=0; $i <=100 ; $i++) { 
             if ($i%2==0) {
@@ -39,30 +38,42 @@ class app{
         }
         include('views/potencias.php');
     }
-    public function primos(){
-        $primos=[];
-        $noPrimos=[];
-        function esPrimo($x){
-       for ($i=1; $i <= ($x/2) ; $i++) { 
-           if ($x%$i==0) {
-               return true;
-           }else {
-               return false;
-           }
-       }          
-       }
-        for ($i=0; $i <=10 ; $i++) { 
-            if (esPrimo($i)==false) {
-              $primos[]=$i;  
-            }else {
-                $noPrimos[]=$i;
+
+    public function primos() {
+        $primosbuenos=[];
+        $primosmalos=[];    
+    function primo($num)
+    {
+        if ($num == 2 || $num == 3 || $num == 5 || $num == 7) {
+            return True;
+        } else {
+            // comprobamos si es par
+            if ($num % 2 != 0) {
+                // comprobamos solo por los impares
+                for ($i = 3; $i <= sqrt($num); $i += 2) {
+                    if ($num % $i == 0) {
+                        return False;
+                    }
+                }
+                return True;
             }
         }
-        include('views/primos.php');
+        return False;
     }
+    for ($i=1; $i<=100; $i++) {
 
-
-
-
+        if (primo($i)) {
+    
+            //echo "<br>El número ".$i." es primo";
+            $primosbuenos[]=$i;
+        } else {
+    
+            //echo "<br>El número ".$i." NO es primo";
+            $primosmalos[]=$i;
+        }
+    
+    }
+    include('views/primos.php');
+}
 }
 ?>
