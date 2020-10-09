@@ -1,5 +1,5 @@
 <?php 
-class app 
+class App 
 {
     public function run()
     {
