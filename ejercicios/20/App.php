@@ -29,7 +29,7 @@ class App
     }
     public function auth()
     {
-
+              
         $nombre = $_POST["nombre"];
         $contraseña = $_POST["contraseña"];
         $_SESSION['nombre']=$nombre;
