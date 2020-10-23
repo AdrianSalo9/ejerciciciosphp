@@ -28,7 +28,7 @@
   <h2>Alta de nuevos deseos</h2>
   <form action="?method=new" method="post">
     <label for="new">Nuevo deseo</label>
-    <input type="text" name="new">
+    <input type="text" name="deseos">
     
     <input type="submit" value="nuevo">
   </form>

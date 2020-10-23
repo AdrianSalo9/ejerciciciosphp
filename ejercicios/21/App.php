@@ -51,30 +51,31 @@ class App
     }
     public function new()
     {
-        if (!isset($_POST['new'])) {
+        if (!isset($_POST['deseos'])) {
             header('Location: index.php?method=home');
             return;
         }
-        $new = $_POST['new'];
+        //$_SESSION['deseos'] = $_POST['deseos'];
         if (isset($_SESSION['deseos'])) {
             $deseos = $_SESSION['deseos'];
         } else {
             $deseos = [];
         }
-        $deseos[] = $new;
-        //setcookie('deseos', serialize($deseos), time() + 60*60*2);
+        $deseos[]= $_POST['deseos'];
+        $_SESSION['deseos']=$deseos;       
         header('Location: index.php?method=home');
     }
 
     public function delete()
     {
-        if (isset($_COOKIE['deseos'])) {
+        if (isset($_SESSION['deseos'])) {
             $deseos = $_SESSION['deseos'];
         } else {
             $deseos = [];
         }
         $id = $_GET['id'];
         unset($deseos[$id]);
+        $_SESSION['deseos']=$deseos; 
         header('Location: index.php?method=home');
     }
 
