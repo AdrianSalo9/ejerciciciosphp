@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="colorescss.css">
-</head>
-
-<body class="$_SESSION['colores']">
-    <h1>Este es el color elegido:
-        <?php echo $_SESSION['colores']?>
-    </h1>
-</body>
-
+</head>    
+<h1>El color elegido es: <?php echo $_SESSION['colores']?></h1>
+        <?php 
+        if ($_SESSION['colores']=='rojo') {?>     
+         <body id=rojo> <?php }       
+         ?></body>   
+         <?php 
+        if ($_SESSION['colores']=='azul') {?>     
+         <body id=azul> <?php }
+         ?></body>  
+        <?php
+        if ($_SESSION['colores']=='amarillo') {?>     
+        <body id=amarillo> <?php }
+        ?></body> 
+        <?php
+        if ($_SESSION['colores']=='verde') {?>     
+        <body id=verde> <?php }
+        ?></body> 
+<a href="?method=close">Elegir otro color</a>
+        
 </html>

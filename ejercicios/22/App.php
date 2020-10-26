@@ -23,12 +23,13 @@ class App
     }
     public function colores()
     {       
-        var_dump($_POST['colores']);
+        //var_dump($_POST['colores']);
         $_SESSION['colores']=$_POST['colores'];
         include('views/colores.php');
     }
     public function close()
     {
         session_destroy();
+        header('Location: ?method=home');
     }
 }
