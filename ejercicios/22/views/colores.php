@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="colores.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="colorescss.css">
 </head>    
 <h1>El color elegido es: <?php echo $_SESSION['colores']?></h1>
         <?php 
